@@ -1,0 +1,19 @@
+server:
+  port: 8181
+  
+spring:
+  datasource:
+    url: jdbc:sqlserver://[servername];databaseName=odata-test
+    username: [username]
+    password: [password]
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jersey:
+    application-path: /odata
+    
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
